@@ -13,15 +13,15 @@ card_number = card_number[::-1]
 
 for x in card_number[::2]:
     sum_odd_digits += int(x)
-    
+
 # Step 3
 
 for x in card_number[1::2]:
-    x = int(x) * 2
-    if x >= 10:
-        sum_even_digits += (1 + (x % 10))
+    double = int(x) * 2
+    if double >= 10:
+        sum_even_digits += 1 + (double % 10)
     else:
-        sum_even_digits += x
+        sum_even_digits += double
 
 # Step 4
 

@@ -1,16 +1,30 @@
 ######################### Quiz Program ##########################
 
-questions = ("1. What does CPU stand for?",
-             "2. Which of the following is an input device?",
-             "3. What is the brain of the computer?",
-             "4. Which one of these is a storage device?",
-             "5. What does RAM stand for?")
+questions = (
+    "1. What does CPU stand for?",
+    "2. Which of the following is an input device?",
+    "3. What is the brain of the computer?",
+    "4. Which one of these is a storage device?",
+    "5. What does RAM stand for?",
+)
 
-options = (("A. Central Processing Unit", "B. Computer Primary Unit", "C. Central Power Unit", "D. Control Program Unit"),
-           ("A. Printer", "B. Monitor", "C. Keyboard", "D. Speaker"),
-           ("A. Hard Drive", "B. CPU", "C. RAM", "D. Keyboard"),
-           ("A. Mouse", "B. Scanner", "C. Hard Disk", "D. Microphone"),
-           ("A. Readily Accessible Memory", "B. Random Access Memory", "C. Rapid Action Module", "D. Read Access Machine"))
+options = (
+    (
+        "A. Central Processing Unit",
+        "B. Computer Primary Unit",
+        "C. Central Power Unit",
+        "D. Control Program Unit",
+    ),
+    ("A. Printer", "B. Monitor", "C. Keyboard", "D. Speaker"),
+    ("A. Hard Drive", "B. CPU", "C. RAM", "D. Keyboard"),
+    ("A. Mouse", "B. Scanner", "C. Hard Disk", "D. Microphone"),
+    (
+        "A. Readily Accessible Memory",
+        "B. Random Access Memory",
+        "C. Rapid Action Module",
+        "D. Read Access Machine",
+    ),
+)
 
 answers = ("A", "C", "B", "C", "B")
 guesses = []
@@ -35,13 +49,13 @@ for question in questions:
 print("------------------------------------------------")
 print("                    RESULTS                     ")
 print("------------------------------------------------")
-print("Answers: ",end=" ")
+print("Answers: ", end=" ")
 for answer in answers:
-    print(answer,end=" ")
+    print(answer, end=" ")
 print()
-print("Guesses: ",end=" ")
+print("Guesses: ", end=" ")
 for guess in guesses:
-    print(guess,end=" ")
+    print(guess, end=" ")
 print()
-final_score = int((score/len(questions))*100)
+final_score = int((score / len(questions)) * 100)
 print(f"Your score is: {final_score}%")

@@ -2,10 +2,12 @@ import random
 
 OPTIONS = ("rock", "paper", "scissors")
 
+
 def print_instructions():
     print("Welcome to Rock, Paper, Scissors!")
     print("Type 'rock', 'paper', or 'scissors' to play.")
     print("Type 'quit' at any time to exit.\n")
+
 
 def get_player_choice():
     while True:
@@ -16,8 +18,10 @@ def get_player_choice():
             return choice
         print("Invalid input. Please try again.")
 
+
 def get_computer_choice():
     return random.choice(OPTIONS)
+
 
 def decide_winner(player, computer):
     if player == computer:
@@ -30,6 +34,7 @@ def decide_winner(player, computer):
         return "win"
     else:
         return "lose"
+
 
 def play_game():
     print_instructions()
@@ -58,6 +63,7 @@ def play_game():
 
     print("Thanks for playing!")
     print(f"Final Score: Wins: {wins}, Losses: {losses}, Ties: {ties}")
+
 
 if __name__ == "__main__":
     play_game()
